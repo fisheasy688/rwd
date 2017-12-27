@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+	<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>響應式網站</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  
+	  <style>
+
+      @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+		@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+		*{
+			font-family: roboto,"Noto Sans TC";
+		}
+
+
+      body,h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+	padding: 0;
+
+      }
+       
+       .clearfix::after{
+
+        	content:"";
+        	display: block;
+        	clear:both;
+        }  
+
+         
+         a{
+           text-decoration: none;
+           color: #000;
+         }
+
+         img{
+
+         	width: 100%;
+ 
+
+         } 
+
+        .fixed-width{
+
+         	width: 1200px;
+            margin: auto;
+
+
+         }
+
+        .full-width{
+             
+             width: 100%;
+
+
+         }
+         
+        .col-2{
+           width:calc(50% - 30px);
+           float: left;
+           margin: 0 15px;
+
+            }
+
+        .col-3{
+
+           width:calc(100% / 3 - 30px);
+           float: left;
+           margin: 0 15px;
+
+
+      
+              }	
+
+         .col-4{
+
+           width:calc(100% / 4 - 30px);
+           float: left;
+           margin: 0 15px;
+        	
+        }	
+
+
+       
+        .wraper{
+
+
+          width: 100%;
+          height: 100%;
+          background-image: url(mosque-abu-dhabi-travel-white-architecture-orient.jpg);
+          background-repeat: no-repeat;
+          -webkit-background-size: cover;
+          background-size: cover;
+          background-attachment: fixed;
+          background-position: center;
+    }
+
+
+        nav{
+			background-color: transparent;
+			position: fixed;
+			z-index: 9;
+
+
+		}
+
+
+        nav .logo{
+
+             float: left;
+             height: 50px;
+             line-height: 50px;
+             color: #fff;
+             font-size: 30px;
+             border: 1px solid #fff;
+             margin: 50px 20px 20px 10px ;
+             padding-left: 20px;
+             padding-right: 20px;
+             font-weight: 800;   
+         }
+
+      
+        nav .orange{
+
+            color: #EE8446;
+            z-index: 9;
+
+
+        }   
+
+        nav li{
+
+           list-style-type: none;
+           float: right;
+
+        }
+
+       nav li a{
+
+           display: block;
+           height: 70px;
+           line-height: 70px;
+           color: #fff;
+           text-align: center;
+           padding-left:15px;
+
+
+       }
+          
+   		header{
+
+        padding-top: 250px;
+      
+      /*padding: 250px 0 500px 0;*/
+      
+    }
+
+
+           
+
+
+           header .title{
+
+             text-align: center;
+
+           }
+
+           
+
+           header .title h1{
+
+             font-size: 36px;
+
+           }
+             
+             header .title h3{
+
+             text-align: center;
+
+             font-style: italic;
+
+           }
+
+           header .title hr{
+
+             width: 300px;
+
+           }
+
+            header .title a,.welcome a{
+            
+             display: block;
+             width: 86px;
+             height: 25px;
+             text-align: center;
+             line-height: 25px;
+             background-color: rgba(160, 160, 160, 0.5);
+             margin:auto; 
+             margin-top: 50px;
+             border-radius: 5px; 
+             padding: 20px 20px;
+             transition:all 0.3s;
+
+             
+
+           }
+
+           .orangeblock .right a{
+            
+             display: block;
+             width: 86px;
+             height: 25px;
+			 text-align: center;
+			 line-height: 25px;
+			 background-color: rgba(255,255,255,.8);
+ 			 margin:auto; 
+			 margin-top: 20px;
+			 border-radius: 5px; 
+			 padding: 20px 20px;
+			 transition:all 0.3s;
+
+             
+
+           }
+           
+            header .title a:hover{
+
+
+            	 background-color: rgba(255,255,255,.7);
+            }
+
+            header   .menu{
+
+                 color: black;
+                 margin-top: 30px;
+
+            }
+
+            header  .icon{
+
+
+             border: 1px solid  #fff;
+             padding: 10px;
+             border-top-style: dotted;
+             margin-bottom:40px;
+
+           }
+            
+           header .menu .col-3:hover{
+
+             background-color:rgba(0,0,0,0.5);
+
+             }       
+
+            header .menu .col-3{
+            transition:all 0.3s;
+            
+             padding: 15px;
+             -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+             box-sizing: border-box;
+              margin-top: 40px;
+
+            }
+
+                     
+
+                        
+
+           header .orangeblock{
+
+                  background-color:#FF006E;
+				  height:150px ;
+				  margin-top: 50px;
+
+
+           }
+
+           .orangeblock .left{
+              
+              float: left;
+              font-size: 30px;
+              color: #fff; 
+              line-height: 150px;
+
+           }
+
+           /*如果粉紅色bar要縮小 header .orangeblock和.orangeblock .left的高要一樣*/
+
+           .orangeblock .right
+           {
+			float: right;}
+
+		.orangeblock .right a {
+
+
+			font-size: 14px;
+			margin-top: 50px;
+		}
+        
+
+    .what{
+      text-align: center;
+      margin-bottom: 50px;
+
+
+        }
+
+        .what h2{
+
+        	margin: 30px 0 15px 0;
+        }
+              
+
+       .what h4{
+
+         margin: 15px 0 30px 0;
+         color: #fff;
+         font-size:36px; 
+
+       }   
+
+
+       .what .col-3{
+
+        background-color: #fff;
+        padding: 30px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-top: 15px ;
+        margin-bottom: 15px;
+
+
+       }    
+        
+       .what col-3 p{
+          font-size:12px;
+          color: rgba(0,0,0,0.7);
+
+       } 
+
+       .what col-3 h5{
+        margin: 5px 0;
+         color: rgba(0,0,0,0.7);
+           font-size: 12px;
+
+
+
+       }
+
+
+       .what .icon_what{
+
+       width: 50px;
+       height: 50px;
+       border-radius:50%;
+       background-color: #C0C0C0;
+       line-height: 50px;
+       color: #F0D;
+       font-size:20px;
+       margin: 15px;
+       transition:all 0.3s;
+
+       }
+        
+       .what .col-3:hover .icon_what{
+
+          background-color: #888;
+          color: #fff;
+
+       }  
+
+      
+       .about{
+      
+         background-color: #fff;
+
+         padding: 50px 0;
+
+         
+       }
+
+       .about h2{
+        font-size:36px; 
+
+        padding-left: 20px;
+       }
+
+        
+
+       
+
+
+       .about .col-2:nth-of-type(2){
+
+             padding: 20px;
+             -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+             box-sizing: border-box;
+
+       }
+
+       .about .col-2:nth-of-type(1){
+
+             padding: 50px;
+             -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+             box-sizing: border-box;
+
+       }
+
+
+       .welcome{
+
+        padding: 50px;
+        text-align: center;
+        background-color: rgba(163.91.144.0.5);
+
+
+
+      }
+
+
+       .welcome p{
+         font-size:24px;
+         font-weight:600;
+
+
+       }
+
+       .fixed-width-600{
+
+        width: 600px;
+        margin: auto;
+
+       }
+
+       .welcome a{
+
+        font-size: 12px;
+        background-color: #d168cb;
+
+        padding: 5px 10px;
+
+
+       }
+
+       .welcome a:hover{
+
+        color: grey;
+       }
+
+       .welcome{
+         color: #d897d4;
+
+       }
+
+
+      .team h1,.store h1{
+
+          text-align: center;
+
+          font-size: 48px;
+          margin-bottom: 20px;
+
+      }
+
+      .team h4,.store h4{
+
+          text-align: center;
+
+          font-size: 30px;
+
+          margin-bottom: 60px;
+
+      }
+
+
+      .team{
+
+
+          padding: 50px 0;
+
+          background-color: #fff;
+      }
+
+
+     .team .col-4{
+      height: 300px;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+
+      position: relative;
+      overflow: hidden;
+
+    }
+
+
+    .team .col-4:nth-of-type(1){
+      background-image: url(1.jpg);
+    }
+    .team .col-4:nth-of-type(2){
+      background-image: url(2.jpg);
+    }
+    .team .col-4:nth-of-type(3){
+      background-image: url(3.jpg);
+    }
+    .team .col-4:nth-of-type(4){
+      background-image: url(4.jpg);
+    }
+
+    .team .job{
+
+     position: absolute;
+     bottom: 0;
+      padding: 5px;
+
+      text-align: right;
+
+      color: #fff;
+
+      font-weight: 600;
+
+      width: 100%;
+      -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+       box-sizing: border-box; 
+
+
+    }
+
+
+    .team .col-4:nth-of-type(1) .job{
+
+      background-color:#F38181;
+      padding: 15px;
+
+    }.team .col-4:nth-of-type(2) .job{
+
+      background-color:#FCE38A;
+      padding: 15px;
+    }
+
+    .team .col-4:nth-of-type(3) .job{
+
+      background-color:#38817A;
+      padding: 15px;
+
+    }
+
+    .team .col-4:nth-of-type(4) .job{
+
+      background-color:#F38181;
+      padding: 15px;
+    }
+
+
+
+    .team .name, .team .desc, .team .icon{
+       
+             position: absolute;
+             left: 25px;
+             width: 100px;
+             top: 15%;
+             opacity: 0;
+             transition: all 0.3s;
+
+    }
+
+
+    .team .icon{
+
+      top:70% ;
+      color: #fff;
+     
+
+
+
+    }  
+
+
+     .team .name{
+
+       font-size:  20px;
+       color: #fff;
+       text-align: 30%;
+       top: 10%;
+
+
+     }
+   
+    .team .desc{
+     top:30%;
+     color: #fff;
+     background-color: purple; 
+
+    }
+
+    .team .icon i{
+
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #ff0000; 
+      line-height:30px;
+      text-align: center;
+      color: #fff;
+      cursor: pointer;
+
+
+
+    }
+    .team .icon fa fa-instagram{
+
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: yellow; 
+      line-height:30px;
+      text-align: center;
+      color: #fff;
+      cursor: pointer;
+
+
+
+    }
+
+
+    .team .col-4::before{
+
+             content:"";
+             display: block;
+             width: 95%;
+             height: 100%;
+             background-color: rgba(255,255,255,0.5);
+             z-index: 1;   
+             transform: skewX(-30deg)translateX(-200px);
+
+    }
+
+
+      .team .col-4:hover::before{
+
+        content"";
+        transform:skewX(-30deg)translateX(-40px); 
+        transition: all 0.3s;
+      }
+
+      .team .col-4:hover .name{
+
+        opacity: 1;
+      }
+
+      .team .col-4:hover .desc{
+
+        opacity: 1;
+      }
+
+      .team .col-4:hover .icon{
+
+        opacity: 1;
+      }
+
+      .store h1,.store h4{
+          color: #fff;
+
+      }
+
+      .store{
+ background-color:transparent;
+        padding:50px 0;
+
+      }
+
+
+      .store .col-3{
+
+           height: 450px;
+           position: relative;
+           background-repeat: no-repeat;
+           -webkit-background-size: cover;
+           background-size: cover;
+
+      }
+
+
+      .store .col-3:nth-of-type(1){
+
+        background-image: url(a.jpg);
+
+      }
+
+      .store .col-3:nth-of-type(2){
+
+        background-image: url(b.jpg);
+
+      }
+
+      .store .col-3:nth-of-type(3){
+
+        background-image: url(c.jpg);
+
+      }
+
+
+      
+
+
+	</style>
+
+
+
+	</head>
+	<body>
+
+          <!--nav.full-width>.fixed-width>.logo+ul>li*8>a-->
+    <div class="wraper">
+		<nav class="full-width clearfix">
+			<div class="fixed-width">
+
+				<div class="logo">FEATURE<span class="orange">D</span></div>
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">Service</a></li>
+					<li><a href="">About Us</a></li>
+					<li><a href="">Team</a></li>
+					<li><a href="">Store</a></li>
+					<li><a href="">Testimonial</a></li>
+					<li><a href="">News</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+			</fixed-width>
+		</nav>
+
+		<header class="full-width">
+			
+               <div class="title">
+               	
+                 <h1>Beautiful City</h1>
+                 <hr>
+                 <h3>Cleanly Coded With User Friendly Interface</h3>
+
+                 <a href="">BUY NOW</a>
+
+
+
+               </div>
+
+               <div class="menu fixed-width clearfix">
+
+               	<!--產生器.col-3*3>.icon+h4+p{Lorem}-->
+
+               <div class="col-3">
+               	<div class="icon fa fa-star-o fa-2x"></div>
+               	<h4>Parallax Effect</h4>
+               	<p>There are many variations of passages of Lorem Ipsum available, believable. </p>
+               </div>
+               <div class="col-3">
+               	<div class="icon fa fa-cubes fa-2x"></div>
+               	<h4>Unlimited Options</h4>
+               	<p>There are many variations of passages of Lorem Ipsum available, believable.</p>
+                 </div>
+               <div class="col-3">
+               	<div class="icon fa fa-compass fa-2x"></div>
+               	<h4>Responsice Design</h4>
+               	<p>There are many variations of passages of Lorem Ipsum available, believable.</p>
+               </div>   </div>
+               
+
+             
+
+               <div class="orangeblock full-width ">
+               	<div class="fixed-width">
+
+
+                     <div class="left">Easy to step up, just take a few steps and your website is ready within a minute
+					</div>
+                  
+
+                     <div class="right">
+                     <a href="">Call To Action</a></div>
+              </div>
+
+                 </div>
+
+
+
+     <!--.what>.fixed-width>h2+h4+.col-3*6>.icon_what+h5+p{lorem}-->
+
+     <div class="what clearfix">
+     	<div class="fixed-width">
+     		<h2>What We Do</h2>
+     		<h4>This Is SubTitle</h4>
+     		<div class="col-3">
+     			<div class="icon_what fa fa-hospital-o"></div>
+     			<h5>Frequently Asked Question</h5>
+     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam itaque qui, reiciendis. Temporibus dolor facilis enim, nobis voluptatem id a similique, quia, aperiam inventore minima sequi! Asperiores corporis, quam reiciendis.</p>
+     		</div>
+     		<div class="col-3">
+      
+     			<div class="icon_what fa fa-hospital-o"></div>
+     			<h5>Free Training Courses</h5>
+     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam itaque qui, reiciendis. Temporibus dolor facilis enim, nobis voluptatem id a similique, quia, aperiam inventore minima sequi! Asperiores corporis, quam reiciendis.</p>
+     		</div>
+     		<div class="col-3">
+     			<div class="icon_what fa fa-hospital-o"></div>
+     			<h5>Clean Code</h5>
+     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam itaque qui, reiciendis. Temporibus dolor facilis enim, nobis voluptatem id a similique, quia, aperiam inventore minima sequi! Asperiores corporis, quam reiciendis..</p>
+     		</div>
+     		<div class="col-3">
+     			<div class="icon_what fa fa-hospital-o"></div>
+     			<h5>Only Good In PayPal</h5>
+     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam itaque qui, reiciendis. Temporibus dolor facilis enim, nobis voluptatem id a similique, quia, aperiam inventore minima sequi! Asperiores corporis, quam reiciendis.</p>
+     		</div>
+     		<div class="col-3">
+     			<div class="icon_what fa fa-hospital-o"></div>
+     			<h5>Production Graph</h5>
+     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam itaque qui, reiciendis. Temporibus dolor facilis enim, nobis voluptatem id a similique, quia, aperiam inventore minima sequi! Asperiores corporis, quam reiciendis.</p>
+     		</div>
+     		<div class="col-3">
+     			<div class="icon_what fa fa-hospital-o"></div>
+     			<h5>Marketing Strategy</h5>
+     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam itaque qui, reiciendis. Temporibus dolor facilis enim, nobis voluptatem id a similique, quia, aperiam inventore minima sequi! Asperiores corporis, quam reiciendis.</p>
+     		</div>
+     	</div>
+     </div>
+
+
+           
+		</header>
+
+
+    <!--.about>.col-2>h2+p+.col-2-->
+
+
+    <div class="about clearfix">
+      <div class="fixed-width"> 
+      <div class="col-2">
+        <h2>ABOUT US</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus odio nesciunt harum neque deserunt deleniti nemo, explicabo id accusamus voluptatum dolor, porro eligendi possimus culpa pariatur. Omnis, dolores ad namLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus odio nesciunt harum neque deserunt deleniti nemo, explicabo id accusamus voluptatum dolor, porro eligendi possimus culpa pariatur. Omnis, dolores ad namLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus odio nesciunt harum neque deserunt deleniti nemo, explicabo id accusamus voluptatum dolor, porro eligendi possimus culpa pariatur. Omnis, dolores ad nam</p>
+      </div>
+      <div class="col-2">
+        <img src="ruler-desk-working.jpg" alt="">
+      </div></div>
+    </div>
+
+      <div class="welcome">
+        <div class="fixed-width-600">
+          
+
+        
+        <p>We offer unlimited column option in our sections.Our support forum open for free users also.welcome</p>
+        <p>welcome</p>
+        <a href="">welcome</a>
+      </div></div>
+
+<div class="team clearfix ">
+  <div class="fixed-width">
+      <h1>Meet our Team</h1>
+    <h4>This Is Subtitle</h4>
+   
+    <div class="col-4">
+      <div class="name">Gabriel Labreez</div>
+      <div class="desc">Donec malesuada pellentesque eros, eu aliquam nunc scelerisque</div>
+      <div class="icon">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+      </div>
+      <div class="job">Co-founder</div>
+    </div>
+    <div class="col-4">
+      <div class="name">Marie Stan</div>
+      <div class="desc">Donec malesuada pellentesque eros, eu aliquam nunc scelerisque</div>
+      <div class="icon">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+      </div>
+      <div class="job">HR Manager</div>
+    </div>
+    <div class="col-4">
+      <div class="name">Maurics Blac</div>
+      <div class="desc">Donec malesuada pellentesque eros, eu aliquam nunc scelerisque</div>
+      <div class="icon">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+      </div>
+      <div class="job">Developer</div>
+    </div>
+    <div class="col-4">
+      <div class="name">David Rasop</div>
+      <div class="desc">Donec malesuada pellentesque eros, eu aliquam nunc scelerisque</div>
+      <div class="icon">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+      </div>
+      <div class="job">Support Manager</div>
+    </div></div>
+  </div>
+   
+    <!-- .store>.fixed-width>h1{Woo Store}+h4{This Is Subtitle}+.col-3*3>a+.price+.title -->
+
+    <div class="store clearfix">
+      <div class="fixed-width">
+        <h1>Woo Store</h1>
+        <h4>This Is Subtitle</h4>
+        <div class="col-3">
+          <a href="">Add To Cart</a>
+          <div class="price">NT$5000</div>
+          <div class="title"></div>
+        </div>
+        <div class="col-3">
+          <a href="">Add To Cart</a>
+          <div class="price">NT$8000</div>
+          <div class="title"></div>
+        </div>
+        <div class="col-3">
+          <a href="">Add To Cart</a>
+          <div class="price">NT$2000</div>
+          <div class="title"></div>
+        </div>
+      </div>
+    </div>
+ 
+     </div><!--wraper-->
+	
+	</body>
+	</html>	       

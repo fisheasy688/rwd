@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>HFS /rwd/</title>
+	<link rel="stylesheet" href="/?mode=section&id=style.css" type="text/css">
+    <script type="text/javascript" src="/?mode=jquery"></script>
+	<link rel="shortcut icon" href="/favicon.ico">
+	<style class='trash-me'>
+	.onlyscript, button[onclick] { display:none; }
+	</style>
+    <script>
+    // this object will store some %symbols% in the javascript space, so that libs can read them
+    HFS = { folder:'/rwd/', number:11, paged:1 }; 
+    </script>
+	<script type="text/javascript" src="/?mode=section&id=lib.js"></script>
+</head>
+<body>
+<!-- -->
+<div id='panel'>
+    	<fieldset id='msgs'>
+		<legend><img src="/~img10"> Messages</legend>
+		<ul style='padding-left:2em'>
+		</ul>
+	</fieldset>
+
+    	<fieldset id='login'>
+		<legend><img src="/~img27"> User</legend>
+		<center>
+		<a href="~login">Login</a>
+		</center>
+	</fieldset>                                       
+
+    	<fieldset id='folder'>
+		<legend><img src="/~img8"> Folder</legend>
+
+       <div style='float:right; position:relative; top:-1em; font-weight:bold;'>
+		<a href=".."><img src="/~img14"> Up</a>
+		</div>
+
+		<div id='breadcrumbs'>
+		
+		<a href="/"  /> <img src="/~img1"> Home</a><a href="/rwd/" style='padding-left:1.4em;' /> &raquo; rwd</a>
+       </div>
+        
+		<div id='folder-stats'>0 folders, 11 files, 9.6 Mbytes
+		</div>
+		
+		
+	</fieldset>
+
+    	<fieldset id='search'>
+		<legend><img src="/~img3"> Search</legend>
+		<form style='text-align:center'>
+			<input name='search' size='15' value="">
+			<input type='submit' value="go">
+		</form>
+		<div style='margin-top:0.5em;' class='hidden popup'>
+			<fieldset>
+				<legend>Where to search</legend>
+					<input type='radio' name='where' value='fromhere' checked='true' />  this folder and sub-folders
+					<br><input type='radio' name='where' value='here' />  this folder only
+					<br><input type='radio' name='where' value='anywhere' />  entire server
+			</fieldset>
+		</div>
+	</fieldset>
+
+    	<fieldset id='select' class='onlyscript'>
+		<legend><img src="/~img15"> Select</legend>
+		<center>
+    	<button onclick="
+            var x = $('#files .selector');
+            if (x.size() > x.filter(':checked').size())
+                x.attr('checked', true).closest('tr').addClass('selected');
+			else
+                x.attr('checked', false).closest('tr').removeClass('selected');
+			selectedChanged();
+			">All</button>
+    	<button onclick="
+            $('#files .selector').attr('checked', function(i,v){ return !v }).closest('tr').toggleClass('selected');
+			selectedChanged();
+            ">Invert</button>
+    	<button onclick='selectionMask.call(this)'>Mask</button>
+		<p style='display:none; margin-top:1em;'><span id='selected-number'>0</span> items selected</p>
+		</center>
+	</fieldset>
+
+    	
+
+    	<fieldset id='actions'>
+		<legend><img src="/~img18"> Actions</legend>
+		<center>
+		
+		
+		
+		
+		<button id='archiveBtn' onclick='if (confirm("Are you sure?")) submit({}, "/rwd/?mode=archive&recursive")'>Archive</button>
+		<a href="/rwd/?tpl=list&folders-filter=\&recursive">Get list</a>
+		</center>
+	</fieldset>
+
+    	<fieldset id='serverinfo'>
+		<legend><img src="/~img0"> Server information</legend>
+		<a href="http://www.rejetto.com/hfs/">HttpFileServer 2.3k</a>
+		<br />Server time: 2017/12/19 上午 11:49:10
+		<br />Server uptime: 02:08:17
+	</fieldset>
+
+
+</div>
+
+<div id='files_outer'>
+	<div style='height:1.6em;'></div>  
+	
+        <form method='post'>
+            <table id='files'>
+             
+            <th><a href="/rwd/?sort=n">Name</a><a href="/rwd/?sort=e">.extension</a>
+            <th><a href="/rwd/?sort=s">Size</a>
+            <th><a href="/rwd/?sort=t">Timestamp</a>
+            <th><a href="/rwd/?sort=d">Hits</a>
+            	<tr class=''><td>
+        <input type='checkbox' class='selector' name='selection' value="1212.html"  />
+		
+		
+		<a href="1212.html"><img src="/~img41"> 1212.html</a>
+		
+		
+<td>514B<td>2017/12/12 上午 10:37:48<td>5
+	<tr class='even'><td>
+        <input type='checkbox' class='selector' name='selection' value="1212-center.html"  />
+		
+		
+		<a href="1212-center.html"><img src="/~img41"> 1212-center.html</a>
+		
+		
+<td>2.7 KB<td>2017/12/12 下午 02:27:42<td>1
+	<tr class=''><td>
+        <input type='checkbox' class='selector' name='selection' value="block%26inline.xlsx"  />
+		
+		
+		<a href="block%26inline.xlsx"><img src="/~img42"> block&amp;inline.xlsx</a>
+		
+		
+<td>10.0 KB<td>2017/12/12 下午 12:24:05<td>0
+	<tr class='even'><td>
+        <input type='checkbox' class='selector' name='selection' value="index-2.html"  />
+		
+		
+		<a href="index-2.html"><img src="/~img41"> index-2.html</a>
+		
+		
+<td>9.1 KB<td>2017/12/19 上午 11:45:28<td>42
+	<tr class=''><td>
+        <input type='checkbox' class='selector' name='selection' value="jeremy-yap-199222.jpg"  />
+		
+		
+		<a href="jeremy-yap-199222.jpg"><img src="/~img43"> jeremy-yap-199222.jpg</a>
+		
+		
+<td>3.5 MB<td>2017/12/13 下午 05:09:41<td>3
+	<tr class='even'><td>
+        <input type='checkbox' class='selector' name='selection' value="jorik-blom-366499.jpg"  />
+		
+		
+		<a href="jorik-blom-366499.jpg"><img src="/~img43"> jorik-blom-366499.jpg</a>
+		
+		
+<td>913.7 KB<td>2017/12/13 下午 05:14:29<td>7
+	<tr class=''><td>
+        <input type='checkbox' class='selector' name='selection' value="lambert-yuri-108539.jpg"  />
+		
+		
+		<a href="lambert-yuri-108539.jpg"><img src="/~img43"> lambert-yuri-108539.jpg</a>
+		
+		
+<td>4.1 MB<td>2017/12/13 上午 11:14:57<td>2
+	<tr class='even'><td>
+        <input type='checkbox' class='selector' name='selection' value="michal-parzuchowski-324218.jpg"  />
+		
+		
+		<a href="michal-parzuchowski-324218.jpg"><img src="/~img43"> michal-parzuchowski-324218.jpg</a>
+		
+		
+<td>1.1 MB<td>2017/12/13 上午 11:16:59<td>3
+	<tr class=''><td>
+        <input type='checkbox' class='selector' name='selection' value="nav.html"  />
+		
+		
+		<a href="nav.html"><img src="/~img41"> nav.html</a>
+		
+		
+<td>1.5 KB<td>2017/12/12 下午 05:13:19<td>1
+	<tr class='even'><td>
+        <input type='checkbox' class='selector' name='selection' value="people-in-cafe-looking-at-city.jpg"  />
+		
+		
+		<a href="people-in-cafe-looking-at-city.jpg"><img src="/~img43"> people-in-cafe-looking-at-city.jpg</a>
+		
+		
+<td>71.2 KB<td>2017/12/19 上午 11:24:08<td>3
+	<tr class=''><td>
+        <input type='checkbox' class='selector' name='selection' value="%E5%8F%83%E8%80%83%E7%B6%B2%E7%AB%99.txt"  />
+		
+		
+		<a href="%E5%8F%83%E8%80%83%E7%B6%B2%E7%AB%99.txt"><img src="/~img44"> 參考網站.txt</a>
+		
+		
+<td>45B<td>2017/12/13 上午 09:30:37<td>1
+
+            </table>
+        </form>
+	
+</div>
+
+</body>
+</html>
+<!-- Build-time: 0.032 -->

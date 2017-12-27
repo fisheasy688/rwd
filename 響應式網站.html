@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+	<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>響應式網站</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  
+	  <style>
+
+      @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+		@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+		*{
+			font-family: roboto,"Noto Sans TC";
+		}
+
+
+      body,h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+	padding: 0;
+
+      }
+       
+       .clearfix::after{
+
+        	content:"";
+        	display: block;
+        	clear:both;
+        }  
+
+         
+         a{
+           text-decoration: none;
+           color: #000;
+         }
+
+         img{
+
+         	width: 100%;
+ 
+
+         } 
+
+        .fixed-width{
+
+         	width:960px;
+            margin: auto;
+
+
+         }
+
+        .full-width{
+             
+             width: 100%;
+
+
+         }
+         
+        .col-2{
+           width:calc(50% - 30px);
+           float: left;
+           margin: 0 15px;
+
+            }
+
+        .col-3{
+
+           width:calc(100% / 3 - 30px);
+           float: left;
+           margin: 0 15px;
+
+
+      
+              }	
+
+         .col-4{
+
+           width:calc(100% / 4 - 30px);
+           float: left;
+           margin: 0 15px;
+        	
+        }	
+
+
+       
+        .wraper{
+
+
+          width: 100%;
+          height: 100%;
+          background-image: url(mosque-abu-dhabi-travel-white-architecture-orient.jpg);
+          background-repeat: no-repeat;
+          -webkit-background-size: cover;
+          background-size: cover;
+          background-attachment: fixed;
+          background-position: center;
+    }
+
+
+        nav{
+			background-color: transparent;
+			position: fixed;
+			z-index: 9;
+
+
+		}
+
+
+        nav .logo{
+
+             float: left;
+             height: 50px;
+             line-height: 50px;
+             color: #fff;
+             font-size: 30px;
+             border: 1px solid #fff;
+             margin: 50px 20px 20px 10px ;
+             padding-left: 20px;
+             padding-right: 20px;
+             font-weight: 800;   
+         }
+
+      
+        nav .orange{
+
+            color: #EE8446;
+            z-index: 9;
+
+
+        }   
+
+        nav li{
+
+           list-style-type: none;
+           float: right;
+
+        }
+
+       nav li a{
+
+           display: block;
+           height: 70px;
+           line-height: 70px;
+           color: #fff;
+           text-align: center;
+           padding-left:15px;
+
+
+       }
+          
+   		header{
+
+        padding-top: 250px;
+      
+      /*padding: 250px 0 500px 0;*/
+      
+    }
+
+
+           
+
+
+           header .title{
+
+             text-align: center;
+
+           }
+
+           
+
+           header .title h1{
+
+             font-size: 36px;
+
+           }
+             
+             header .title h3{
+
+             text-align: center;
+
+             font-style: italic;
+
+           }
+
+           header .title hr{
+
+             width: 300px;
+
+           }
+
+            header .title a,.welcome a,.store .col-3 a{
+            
+             display: block;
+             width: 86px;
+             height: 25px;
+             text-align: center;
+             line-height: 25px;
+             background-color: rgba(160, 160, 160, 0.5);
+             margin:auto; 
+             margin-top: 50px;
+             border-radius: 5px; 
+             padding: 20px 20px;
+             transition:all 0.3s;
+
+             
+
+           }
+
+
+           
+            header .title a:hover{
+
+
+            	 background-color: rgba(255,255,255,.7);
+            }
+
+            header   .menu{
+
+                 color: black;
+                 margin-top: 30px;
+
+            }
+
+            header  .icon{
+
+
+             border: 1px solid  #fff;
+             padding: 10px;
+             border-top-style: dotted;
+             margin-bottom:40px;
+
+           }
+            
+           header .menu .col-3:hover{
+
+             background-color:rgba(0,0,0,0.5);
+
+             }       
+
+            header .menu .col-3{
+            transition:all 0.3s;
+            
+             padding: 15px;
+             -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+             box-sizing: border-box;
+              margin-top: 40px;
+
+            }
+
+                     
+
+                        
+
+           header .orangeblock{
+
+            background-color:#FF006E;
+            height:150px ;
+            margin-top: 50px;
+
+
+           }
+
+           .orangeblock .right a{
+            
+             display: block;
+             width: 86px;
+             height: 25px;
+             text-align: center;
+             line-height: 25px;
+             background-color: rgba(255,255,255,.8);
+             margin:auto; 
+             margin-top: 20px;
+             border-radius: 5px; 
+             padding: 20px 20px;
+             transition:all 0.3s;
+
+             font-size: 14px;
+               margin-top: 30px;
+
+           }
+
+           .orangeblock .left{
+              
+              float: left;
+              font-size: 20px;
+              color: #fff; 
+              /*line-height: 15px;*/
+              padding: 50px 0;
+
+           }
+
+           /*如果粉紅色bar要縮小 
+           header .orangeblock和.orangeblock .left的高要一樣*/
+
+           .orangeblock .right
+           {
+             float: right;}
+
+                   
+        
+
+         .what{
+            text-align: center;
+            margin-bottom: 50px;
+
+
+        }
+
+        .what h2{
+
+        	margin: 30px 0 15px 0;
+        }
+              
+
+       .what h4{
+
+         margin: 15px 0 30px 0;
+         color: #fff;
+         font-size:36px; 
+
+       }   
+
+
+       .what .col-3{
+
+        background-color: #fff;
+        padding: 30px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-top: 15px ;
+        margin-bottom: 15px;
+
+
+       }    
+        
+       .what col-3 p{
+          font-size:12px;
+          color: rgba(0,0,0,0.7);
+
+       } 
+
+       .what col-3 h5{
+        margin: 5px 0;
+         color: rgba(0,0,0,0.7);
+           font-size: 12px;
+
+
+
+       }
+
+
+       .what .icon_what{
+
+       width: 50px;
+       height: 50px;
+       border-radius:50%;
+       background-color: #C0C0C0;
+       line-height: 50px;
+       color: #F0D;
+       font-size:20px;
+       margin: 15px;
+       transition:all 0.3s;
+
+       }
+        
+       .what .col-3:hover .icon_what{
+
+          background-color: #888;
+          color: #fff;
+
+       }  
+
+      
+       .about{
+      
+         background-color: #fff;
+
+         padding: 50px 0;
+
+         
+       }
+
+       .about h2{
+        font-size:36px; 
+
+        padding-left: 20px;
+       }
+
+        
+
+       
+
+
+       .about .col-2:nth-of-type(2){
+
+             padding: 20px;
+             -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+             box-sizing: border-box;
+
+       }
+
+       .about .col-2:nth-of-type(1){
+
+             padding: 50px;
+             -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+             box-sizing: border-box;
+
+       }
+
+
+       .welcome{
+
+        padding: 50px;
+        text-align: center;
+        background-color: rgba(163.91.144.0.5);
+
+
+
+      }
+
+
+       .welcome p{
+         font-size:24px;
+         font-weight:600;
+
+
+       }
+
+       .fixed-width-600{
+
+        width: 600px;
+        margin: auto;
+
+       }
+
+       .welcome a,.store .col-3 a,.touch input[type="submit"]{
+
+        font-size: 12px;
+        
+        background-color: #d897d4;
+        padding: 5px 10px;
+
+
+       }
+ 
+
+
+       .welcome a:hover,.store .col-3 a:hover,.touch input[type="submit"]{
+
+        
+        background-color: rgba(216,151,212,0.5);
+          
+       }
+
+       .welcome{
+
+        color: #d897d4;
+
+       }
+
+
+      .team h1,.store h1,.happy h1,.news h1,.touch h1{
+
+          text-align: center;
+
+          font-size: 48px;
+          margin-bottom: 20px;
+
+      }
+
+      .team h4,.store h4,.happy h4,.news h4,.touch h4{
+
+          text-align: center;
+
+          font-size: 30px;
+
+          margin-bottom: 60px;
+
+      }
+
+      .team,.happy{
+
+
+          padding: 50px 0;
+
+          background-color: #fff;
+      }
+
+
+     .team .col-4{
+      height: 300px;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+
+      position: relative;
+      overflow: hidden;
+
+    }
+
+
+    .team .col-4:nth-of-type(1){
+      background-image: url(1.jpg);
+    }
+    .team .col-4:nth-of-type(2){
+      background-image: url(2.jpg);
+    }
+    .team .col-4:nth-of-type(3){
+      background-image: url(3.jpg);
+    }
+    .team .col-4:nth-of-type(4){
+      background-image: url(4.jpg);
+    }
+
+    .team .job{
+
+     position: absolute;
+     bottom: 0;
+     padding: 5px;
+
+     text-align: right;
+
+     color: #fff;
+
+     font-weight: 600;
+
+     width: 100%;
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box; 
+
+
+    }
+
+
+    .team .col-4:nth-of-type(1) .job{
+
+      background-color:#F38181;
+      padding: 15px;
+
+    }.team .col-4:nth-of-type(2) .job{
+
+      background-color:#FCE38A;
+      padding: 15px;
+    }
+
+    .team .col-4:nth-of-type(3) .job{
+
+      background-color:#38817A;
+      padding: 15px;
+
+    }
+
+    .team .col-4:nth-of-type(4) .job{
+
+      background-color:#F38181;
+      padding: 15px;
+    }
+
+
+
+    .team .name, .team .desc, .team .icon{
+       
+             position: absolute;
+             left: 25px;
+             width: 100px;
+             top: 15%;
+             opacity: 0;
+             transition: all 0.3s;
+
+    }
+
+
+    .team .icon{
+
+      top:70% ;
+      color: #fff;
+     
+
+    }  
+
+
+     .team .name{
+
+       font-size:  20px;
+       color: #fff;
+       text-align: 30%;
+       top: 10%;
+
+
+     }
+   
+    .team .desc{
+     top:30%;
+     color: #fff;
+     
+
+    }
+
+    .team .icon i{
+
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #D67FFF; 
+      line-height:30px;
+      text-align: center;
+      color: #fff;
+      cursor: pointer;
+
+
+
+    }
+    
+
+
+    .team .col-4::before{
+
+             content:"";
+             display: block;
+             width: 95%;
+             height: 100%;
+             background-color: rgba(255,255,255,0.5);
+             z-index: 1;   
+             transform: skewX(-30deg)translateX(-200px);
+
+    }
+
+
+      .team .col-4:hover::before{
+
+        content"";
+        transform:skewX(-30deg)translateX(-40px); 
+        transition: all 0.3s;
+      }
+
+      .team .col-4:hover .name{
+
+        opacity: 1;
+      }
+
+      .team .col-4:hover .desc{
+
+        opacity: 1;
+      }
+
+      .team .col-4:hover .icon{
+
+        opacity: 1;
+      }
+
+      .store h1,.store h4{
+          color: #fff;
+
+      }
+
+      .store{
+       background-color:transparent;
+       padding:50px 0;
+
+      }
+
+
+      .store .col-3{
+
+           height: 450px;
+           position: relative;
+           background-repeat: no-repeat;
+           -webkit-background-size: cover;
+           background-size: cover;
+           transition:all 0.3s; 
+
+      }
+
+
+      .store .col-3:nth-of-type(1){
+
+        background-image: url(a.jpg);
+
+      }
+
+      .store .col-3:nth-of-type(2){
+
+        background-image: url(b.jpg);
+
+      }
+
+      .store .col-3:nth-of-type(3){
+
+        background-image: url(c.jpg);
+
+      }
+
+      .store .col-3 a{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all 0.3s;
+
+      }
+
+
+      .store .col-3 .price{
+
+       position: absolute;
+       top:70%;
+       text-align: center;
+       width: 350px;
+       color: #fff;
+       font-weight: 1200px; 
+       font-family: "arial";
+       font-size: 25px;
+       font-weight: 600;
+       opacity: 0; 
+       transition: all 0.3s;
+        
+
+      }
+
+
+      .store .col-3 .title{
+             
+             position: absolute;
+             bottom: 0;
+             width: 100%;
+             text-align: center;
+             color: #fff;
+             background-color: rgba(0,0,0,0.5);
+             padding: 5px;
+             -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+             box-sizing: border-box;
+
+      }
+
+
+      .store .col-3::before{
+
+       content:"";
+       width: 100%;
+       height: 100%;
+       background-color: rgba(0,0,0,0.75);
+       position: absolute;
+       opacity: 0;
+       transition: all 0.3s 0.2s;
+
+
+      }
+
+
+      .store .col-3:hover a,.store .col-3:hover .price{
+
+      opacity:0.5; 
+
+      }
+     
+
+     .store .col-3:hover::before{
+
+      opacity: 1;
+
+       
+     } 
+
+
+     .happy .col-3{
+
+        padding: 30px;
+        background-color: #eee;
+        box-shadow: 1px 0 5px #rgba(0,0,0,0.5);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        height: 300px;
+        position: relative;
+
+     }
+
+
+     .happy .col-3 img{
+
+       display: block;
+       width: 81px;
+       height: 81px;
+       border-radius:50%;
+       border: 2px solid #fff;
+       box-shadow: 0 0 0 1px #f40;
+       position: relative;
+       margin: auto;
+       text-align:-50%;
+       top:-100px;
+      
+
+
+     }
+
+
+     .happy .col-3 p{
+      position:relative;
+      top:-40px; 
+      font-style:italic; 
+
+     }
+
+     .happy .quote span{
+
+        font-size: 28PX;
+        color: #f40;
+
+
+     }
+
+     ..happy .quote{
+
+        position: absolute;
+        top:10px;
+        left: 10px;
+
+     }
+
+     .happy .sign{
+      position: absolute;
+      right: 15px;
+      bottom:15px;
+      font-size:20px;
+      color: #f40;
+      font-weight: 600;
+      font-style:italic; 
+     }
+   
+       .news{
+         padding: 100px 0;
+          }
+
+
+      .news .col-4{
+        margin: 0;
+        width: 25%;
+        height: 200px;
+        background-repeat: no-repeat;
+        -webkit-background-size:cover ;
+         background-size:cover ; 
+         background-position: center;
+         position: relative;
+
+         
+      }
+
+      .news .col-4:nth-of-type(1){
+
+        background-image: url(001.jpg);
+
+      }
+
+      .news .col-4:nth-of-type(2){
+
+        background-image: url(002.jpg);
+
+      }
+
+      .news .col-4:nth-of-type(3){
+
+        background-image: url(003.jpg);
+
+      }
+
+      .news .col-4:nth-of-type(4){
+
+        background-image: url(004.jpg);
+
+      }
+
+
+      .news .col-4{
+
+        color: #fff;
+        text-align: center;
+        overflow: hidden;
+
+      }
+
+      .news h1,.news p{
+           
+           text-shadow: 1px 1px 5px #000; 
+
+      }
+
+      .news .box{
+
+         position: absolute;
+         top:178px;
+         transition: all 0.3s; 
+
+      }
+      
+      
+     .news .col-4:hover .box{
+
+          top: 30%;
+
+     }  
+
+     .touch h1,.touch h4{
+      color: #fff;
+     } 
+
+     .touch{
+            padding: 100px 0;
+            background-color: rgba(0,0,0,.5);
+
+     }
+
+     .touch .col-2:nth-of-type(1){
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         box-sizing: border-box;   
+
+     }
+
+     .touch h3{
+        text-align: center;
+        padding: 15px 0;}
+
+     .touch input[type="text"],
+     .touch input[type="email"],
+     .touch input[type="number"],
+     .touch textarea{
+
+       width: 100%;
+       height: 30px;
+       margin: 5px 0;
+       -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+       box-sizing: border-box;
+       border:0;
+       border-bottom: 2px solid #ccc;
+       transition: all 0.3s;
+
+
+     }  
+
+     .touch input[type="text"]:focus,
+     .touch input[type="email"]:focus,
+     .touch input[type="number"]:focus,
+     .touch textarea:focus{
+
+              outline: 0;
+              border-bottom: 2px solid #F86B38;
+      }
+
+        
+        .touch textarea{
+         height: 100px;
+
+
+
+        }
+
+        .touch h4{
+
+          margin-bottom: 150px; 
+        }   
+        /*textarea往下移*/
+
+        .touch input[type="submit"]{
+              display: block;
+               margin: 10px auto;
+               height: initial;
+               line-height: initial;
+                 width: 80px;
+                 border-radius: 9%;
+
+        }
+
+
+        .touch .col-3{
+
+           color: #a5a5a5;
+           text-align: center;
+
+        }
+
+        .touch .icon-touch{
+
+          font-size: 45px;
+          margin-bottom: ;
+        }
+
+   
+
+    .touch p{
+
+        font-size: 14px;
+        margin-bottom: 15px;
+
+    }
+
+    .touch .map{
+         width: 100%;
+         height: 275px;
+         margin-top: 30px;
+
+
+    }
+
+
+    .touch .map iframe{
+
+       width: 100%;
+       height: 100%;
+    }
+
+
+
+
+
+
+       
+
+
+	</style>
+
+
+
+	</head>
+	<body>
+
+          <!--nav.full-width>.fixed-width>.logo+ul>li*8>a-->
+    <div class="wraper">
+		<nav class="full-width clearfix">
+			<div class="fixed-width">
+
+				<div class="logo">FEATURE<span class="orange">D</span></div>
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">Service</a></li>
+					<li><a href="">About Us</a></li>
+					<li><a href="">Team</a></li>
+					<li><a href="">Store</a></li>
+					<li><a href="">Testimonial</a></li>
+					<li><a href="">News</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+			</fixed-width>
+		</nav>
+
+		<header class="full-width">
+			
+               <div class="title">
+               	
+                 <h1>Beautiful City</h1>
+                 <hr>
+                 <h3>Cleanly Coded With User Friendly Interface</h3>
+
+                 <a href="">BUY NOW</a>
+
+
+
+               </div>
+
+               <div class="menu fixed-width clearfix">
+
+               	<!--產生器.col-3*3>.icon+h4+p{Lorem}-->
+
+               <div class="col-3">
+               	<div class="icon fa fa-star-o fa-2x"></div>
+               	<h4>Parallax Effect</h4>
+               	<p>There are many variations of passages of Lorem Ipsum available, believable. </p>
+               </div>
+               <div class="col-3">
+               	<div class="icon fa fa-cubes fa-2x"></div>
+               	<h4>Unlimited Options</h4>
+               	<p>There are many variations of passages of Lorem Ipsum available, believable.</p>
+                 </div>
+               <div class="col-3">
+               	<div class="icon fa fa-compass fa-2x"></div>
+               	<h4>Responsice Design</h4>
+               	<p>There are many variations of passages of Lorem Ipsum available, believable.</p>
+               </div>   </div>
+               
+
+             
+
+               <div class="orangeblock full-width ">
+               	<div class="fixed-width">
+
+
+                     <div class="left">Easy to step up, just take a few steps and your website is ready within a minute
+					</div>
+                  
+
+                     <div class="right">
+                     <a href="">Call To Action</a></div>
+              </div>
+
+                 </div>
+
+
+
+     <!--.what>.fixed-width>h2+h4+.col-3*6>.icon_what+h5+p{lorem}-->
+
+     <div class="what clearfix">
+     	<div class="fixed-width">
+     		<h2>What We Do</h2>
+     		<h4>This Is SubTitle</h4>
+     		<div class="col-3">
+     			<div class="icon_what fa fa-hospital-o"></div>
+     			<h5>Frequently Asked Question</h5>
+     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam itaque qui, reiciendis. Temporibus dolor facilis enim, nobis voluptatem id a similique, quia, aperiam inventore minima sequi! Asperiores corporis, quam reiciendis.</p>
+     		</div>
+     		<div class="col-3">
+      
+     			<div class="icon_what fa fa-hospital-o"></div>
+     			<h5>Free Training Courses</h5>
+     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam itaque qui, reiciendis. Temporibus dolor facilis enim, nobis voluptatem id a similique, quia, aperiam inventore minima sequi! Asperiores corporis, quam reiciendis.</p>
+     		</div>
+     		<div class="col-3">
+     			<div class="icon_what fa fa-hospital-o"></div>
+     			<h5>Clean Code</h5>
+     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam itaque qui, reiciendis. Temporibus dolor facilis enim, nobis voluptatem id a similique, quia, aperiam inventore minima sequi! Asperiores corporis, quam reiciendis..</p>
+     		</div>
+     		<div class="col-3">
+     			<div class="icon_what fa fa-hospital-o"></div>
+     			<h5>Only Good In PayPal</h5>
+     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam itaque qui, reiciendis. Temporibus dolor facilis enim, nobis voluptatem id a similique, quia, aperiam inventore minima sequi! Asperiores corporis, quam reiciendis.</p>
+     		</div>
+     		<div class="col-3">
+     			<div class="icon_what fa fa-hospital-o"></div>
+     			<h5>Production Graph</h5>
+     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam itaque qui, reiciendis. Temporibus dolor facilis enim, nobis voluptatem id a similique, quia, aperiam inventore minima sequi! Asperiores corporis, quam reiciendis.</p>
+     		</div>
+     		<div class="col-3">
+     			<div class="icon_what fa fa-hospital-o"></div>
+     			<h5>Marketing Strategy</h5>
+     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam itaque qui, reiciendis. Temporibus dolor facilis enim, nobis voluptatem id a similique, quia, aperiam inventore minima sequi! Asperiores corporis, quam reiciendis.</p>
+     		</div>
+     	</div>
+     </div>
+
+
+           
+		</header>
+
+
+    <!--.about>.col-2>h2+p+.col-2-->
+
+
+    <div class="about clearfix">
+      <div class="fixed-width"> 
+      <div class="col-2">
+        <h2>ABOUT US</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus odio nesciunt harum neque deserunt deleniti nemo, explicabo id accusamus voluptatum dolor, porro eligendi possimus culpa pariatur. Omnis, dolores ad namLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus odio nesciunt harum neque deserunt deleniti nemo, explicabo id accusamus voluptatum dolor, porro eligendi possimus culpa pariatur. Omnis, dolores ad namLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus odio nesciunt harum neque deserunt deleniti nemo, explicabo id accusamus voluptatum dolor, porro eligendi possimus culpa pariatur. Omnis, dolores ad nam</p>
+      </div>
+      <div class="col-2">
+        <img src="ruler-desk-working.jpg" alt="">
+      </div></div>
+    </div>
+
+      <div class="welcome">
+        <div class="fixed-width-600">
+          
+
+        
+        <p>We offer unlimited column option in our sections.Our support forum open for free users also.welcome</p>
+        <p>welcome</p>
+        <a href="">welcome</a>
+      </div></div>
+
+<div class="team clearfix ">
+  <div class="fixed-width">
+      <h1>Meet our Team</h1>
+    <h4>This Is Subtitle</h4>
+   
+    <div class="col-4">
+      <div class="name">Gabriel Labreez</div>
+      <div class="desc">Donec malesuada pellentesque eros, eu aliquam nunc scelerisque</div>
+      <div class="icon">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+      </div>
+      <div class="job">Co-founder</div>
+    </div>
+    <div class="col-4">
+      <div class="name">Marie Stan</div>
+      <div class="desc">Donec malesuada pellentesque eros, eu aliquam nunc scelerisque</div>
+      <div class="icon">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+      </div>
+      <div class="job">HR Manager</div>
+    </div>
+    <div class="col-4">
+      <div class="name">Maurics Blac</div>
+      <div class="desc">Donec malesuada pellentesque eros, eu aliquam nunc scelerisque</div>
+      <div class="icon">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+      </div>
+      <div class="job">Developer</div>
+    </div>
+    <div class="col-4">
+      <div class="name">David Rasop</div>
+      <div class="desc">Donec malesuada pellentesque eros, eu aliquam nunc scelerisque</div>
+      <div class="icon">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+      </div>
+      <div class="job">Support Manager</div>
+    </div></div>
+  </div>
+   
+    <!-- .store>.fixed-width>h1{Woo Store}+h4{This Is Subtitle}+.col-3*3>a+.price+.title -->
+
+    <div class="store clearfix">
+      <div class="fixed-width">
+        <h1>Woo Store</h1>
+        <h4>This Is Subtitle</h4>
+        <div class="col-3">
+          <a href="">Add To Cart</a>
+          <div class="price">&pound;5000</div>
+          <div class="title">Black-T-shirt</div>
+        </div>
+        <div class="col-3">
+          <a href="">Add To Cart</a>
+          <div class="price">&pound;8000</div>
+          <div class="title">Black-T-shirt</div>
+        </div>
+        <div class="col-3">
+          <a href="">Add To Cart</a>
+          <div class="price">&pound;2000</div>
+          <div class="title">Black-T-shirt</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- .happy>.fixed-width>h1{Happy Customers}+h4{This is subtitle}+.col-3*3>.quote+img+p+.sign -->
+
+    <div class="happy clearfix">
+      <div class="fixed-width">
+        <h1>Happy Customers</h1>
+        <h4>This is subtitle</h4>
+        <div class="col-3">
+          <div class="quote"><span class="fa fa-quote-left"></span></div>
+          <img src="a1.jpg" alt="">
+          <p>I develop lots of websites with a vaiety of themes….the support I have had from ThemeHunk has been first class. Very quick, good support and always ready to correct my css errors!. They have tweaked the theme for me and have been great. Great support guys</p>
+          <div class="sign">Alex</div>
+        </div>
+        <div class="col-3">
+          <div class="quote"><span class="fa fa-quote-left"></span></div>
+          <img src="a2.jpg" alt="">
+          <p>I develop lots of websites with a vaiety of themes….the support I have had from ThemeHunk has been first class. Very quick, good support and always ready to correct my css errors!. They have tweaked the theme for me and have been great. Great support guys</p>
+          <div class="sign">Josh</div>
+        </div>
+        <div class="col-3">
+          <div class="quote"><span class="fa fa-quote-left"></span></div>
+          <img src="a3.jpg" alt="">
+          <p>I develop lots of websites with a vaiety of themes….the support I have had from ThemeHunk has been first class. Very quick, good support and always ready to correct my css errors!. They have tweaked the theme for me and have been great. Great support guys</p>
+          <div class="sign">Maria</div>
+        </div>
+      </div>
+      </div>
+
+     <!-- .news>h1{Latest News}+h4{This is subtitle}+.col-4*4>.box>h3+p -->
+
+    
+
+     <div class="news clearfix">
+       <h1>Latest News</h1>
+       <h4>This is subtitle</h4>
+       <div class="col-4">
+         <div class="box">
+           <h3>Interview Meet</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.</p>
+         </div>
+       </div>
+       <div class="col-4">
+         <div class="box">
+           <h3>Coffee Time</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.</p>
+         </div>
+       </div>
+       <div class="col-4">
+         <div class="box">
+           <h3>Business News</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.</p>
+         </div>
+       </div>
+       <div class="col-4">
+         <div class="box">
+           <h3>Official Meet</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur..</p>
+         </div>
+       </div>
+     </div>
+
+ 
+ <!-- .touch>.fixed-width>h1+h4+.col-2*2 -->
+
+  
+  <div class="touch clearfix">
+    <div class="fixed-width">
+      <h1>Get In Touch</h1>
+      <h4>Any question?</h4>
+      <div class="col-2">
+        <form action="">
+          <h3>Contact Us</h3>
+          <div><input type="text" placeholder="Name"></div>
+          <div><input type="email" placeholder="Email"></div>
+          <div><input type="number" placeholder="Phone"></div>
+          <div><textarea placeholder="Message"></textarea></div>
+          <input type="submit" value="送出">
+        </form>
+      </div>
+      <div class="col-2 clearfix">
+        <div class="col-3">
+          <div class="icon_touch fa fa-mobile"></div>
+          <p>+91 987654321</p>
+        </div>
+        <div class="col-3">
+          <div class="icon_touch fa fa-home"></div>
+          <p>92 Bayport Ave. South Richmond Hill, NY 11413</p>
+        </div>
+        <div class="col-3">
+          <div class="icon_touch fa fa-envelope-o"></div>
+          <p>info@themehunk.com</p>
+        </div>
+
+        <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.5374971475903!2d121.51877182916661!3d25.062904998997443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9415060c187%3A0xcc343259c5c0b6bf!2z5o236YGL5rCR5qyK6KW_6Lev56uZ!5e0!3m2!1szh-TW!2stw!4v1514191810802" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- footer.fixed-width>.top>(.col-4*4>h5+ul>li)+.bottom>.copyright+.icon_footer -->
+
+ <footer class="fixed-width">
+   <div class="top clearfix">
+     <div class="col-4">
+       <h5>IMPORTANT LINKS</h5>
+       <ul>
+         <li>Affliates</li>
+         <li>Privacy Policy</li>
+         <li>Custom work</li>
+       </ul>
+     </div>
+     <div class="col-4">
+       <h5>RECENT POSTS</h5>
+       <ul>
+         <li>Interview Meet</li>
+          <li>Business News</li>
+          <li>Coffee Timet</li>
+
+       </ul>
+     </div>
+     <div class="col-4">
+       <h5>TAGS</h5>
+       <ul>
+         <li>Agency</li>
+          <li>Business</li>
+          <li>Meeting</li>
+          <li>Offici</li>
+          <li>Ontime</li>
+          <li>Relax</li>
+
+       </ul>
+     </div>
+     <div class="col-4">
+       <h5>ABOUT</h5>
+       <ul>
+         <li>>Cras egestas lectus nec tortor cursus tristique. Maecenas id lacus quis nibh sollicitudin laoreet quis eget leo.</li>
+       </ul>
+     </div>
+     <div class="bottom">
+       <div class="copyright">Business onepage theme Powered by ThemeHunk</div>
+       <div class="icon_footer">
+          <span class="fa fa-facebook"></span>
+          <span class="fa fa-twitter"></span>
+          <span class="fa fa-google-plus"></span>
+          <span class="fa fa-behance"></span>
+          <span class="fa fa-pinterest-p"></span>
+
+
+       </div>
+     </div>
+   </div>
+ </footer>
+
+   
+
+     </div><!--wraper-->
+	
+	</body>
+	</html>	       
